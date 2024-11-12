@@ -131,10 +131,10 @@ void AVolumetricCloudHeight::ApplyHeightMap(int index)
 	// 몇번째 스트립을 복사할지
 	ApplyHeightMap_MID->SetScalarParameterValue(FName("FromStripNum"), CloudHeightInfos[index].Strip);
 
-	// 하이트맵 에셋의 스트립의 개수가 몇개인지. 보통 32개이다.
-	ApplyHeightMap_MID->SetScalarParameterValue(FName("HeightMapNum"), 32);
+	// 하이트맵 에셋의 스트립의 개수가 몇개인지. 레데리는 32개이다.
+	ApplyHeightMap_MID->SetScalarParameterValue(FName("HeightMapNum"), 4);
 		
-	// 런타임 하이트맵의 스트립 개수가 몇개인지, 보통 32개이다.
+	// 런타임 하이트맵의 스트립 개수가 몇개인지, 32개이다.
 	ApplyHeightMap_MID->SetScalarParameterValue(FName("RuntimeMapNum"), 32);
 
 	// 이전에 렌더타겟으로 쓰인 하이트맵을 파라미터로 설정
